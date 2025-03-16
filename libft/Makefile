@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ncolomer <ncolomer@student.42.fr>          +#+  +:+       +#+         #
+#    By: cldavid <cldavid@student.42nice.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2019/10/11 21:19:28 by ncolomer          #+#    #+#              #
-#    Updated: 2019/10/18 23:01:39 by ncolomer         ###   ########.fr        #
+#    Created: 2025/03/13 17:17:15 by cldavid           #+#    #+#              #
+#    Updated: 2025/03/13 17:25:35 by cldavid          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
