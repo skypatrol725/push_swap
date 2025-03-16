@@ -57,6 +57,10 @@ int     check_error(char **argv, int i, int j);
 int     ft_check_dup(t_stack *a);
 int     check_args(char **argv);
 
+// Parsing
+t_stack *ft_parse_quoted(char **av);
+t_stack *ft_parse(int ac, char **av);
+
 // Lists management
 void    list_args(char **av, t_stack **stack_a);
 void    ft_add_back(t_stack **stack, t_stack *stack_new);
