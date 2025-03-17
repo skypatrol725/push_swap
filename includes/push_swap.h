@@ -60,11 +60,18 @@ int     check_args(char **argv);
 // Parsing
 t_stack *ft_parse_quoted(char **av);
 t_stack *ft_parse(int ac, char **av);
+int     ft_find_index(t_stack *a, int nbr);
+int     ft_find_place_b(t_stack *stack_b, int nbr_push);
+int     ft_find_place_a(t_stack *stack_a, int nbr_push);
 
 // Lists management
 void    list_args(char **av, t_stack **stack_a);
 void    ft_add_back(t_stack **stack, t_stack *stack_new);
 t_stack *ft_stack_new(int content);
+t_stack *ft_lstlast(t_stack *lst);
+int     ft_lstsize(t_stack *lst);
+int     ft_min(t_stack *a);
+int     ft_max(t_stack *a);
 
 // Memory management
 void    ft_free(t_stack **lst);
