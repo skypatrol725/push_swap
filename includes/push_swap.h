@@ -42,6 +42,21 @@ void	ft_rrr(t_stack **a, t_stack **b, int j);
 void    ft_pa(t_stack **a, t_stack **b, int j);
 void	ft_pb(t_stack **a, t_stack **b, int j);
 
+// Operations management
+int     ft_case_ra_rb(t_stack *a, t_stack *b, int c);
+int     ft_case_rra_rrb(t_stack *a, t_stack *b, int c);
+int     ft_case_rra_rb(t_stack *a, t_stack *b, int c);
+int     ft_case_ra_rrb(t_stack *a, t_stack *b, int c);
+
+int     ft_case_ra_rb_a(t_stack *a, t_stack *b, int c);
+int     ft_case_rra_rrb_a(t_stack *a, t_stack *b, int c);
+int     ft_case_ra_rrb_a(t_stack *a, t_stack *b, int c);
+int     ft_case_rra_rb_a(t_stack *a, t_stack *b, int c);
+
+int     ft_apply_ra_rb(t_stack **a, t_stack **b, int c, char s);
+int     ft_apply_rra_rrb(t_stack **a, t_stack **b, int c, char s);
+int	    ft_apply_rra_rb(t_stack **a, t_stack **b, int c, char s);
+int	    ft_apply_ra_rrb(t_stack **a, t_stack **b, int c, char s);
 
 t_stack *ft_sub_process(char **argv);
 t_stack *ft_process(int argc, char **argv);
