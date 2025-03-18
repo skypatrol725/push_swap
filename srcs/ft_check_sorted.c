@@ -1,36 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_parse.c                                         :+:      :+:    :+:   */
+/*   ft_check_sorted.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cldavid <cldavid@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/16 13:29:37 by cldavid           #+#    #+#             */
-/*   Updated: 2025/03/16 13:29:37 by cldavid          ###   ########.fr       */
+/*   Created: 2025/03/16 15:56:18 by cldavid           #+#    #+#             */
+/*   Updated: 2025/03/16 15:56:18 by cldavid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-// Parsing function
-// 1. Checks that number of argument is valid
-//
-// 2. If 2 arguments --> quoted string
-//
-// 3. If more than 2 --> list the arguments
-t_stack *ft_parse(int ac, char **av)
+// This function checks if the stack is sorted.
+int ft_check_sorted(t_stack *stack_a)
 {
-    t_stack *stack_a;
-    int     i;
-    int     j;
+    int i;
 
-    i = 1;
-    stack_a = NULL;
-    if (ac < 2)
-        ft_error();
-    else if (ac == 2)
-        stack_a = ft_parse_quoted(av);
-    else
-        list_args(av, &stack_a);
-    return (stack_a);
+    i = stack_a->nbr;
+    while (stack_a)
+    {
+        if (i > stack_a->nbr)
+            return (0);
+        i = stack_a->nbr;
+        stack_a = stack_a->next;
+    }
+    return (1);
 }

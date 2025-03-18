@@ -23,7 +23,7 @@ int     ft_case_ra_rb_a(t_stack *a, t_stack *b, int c)
 {
     int     i;
 
-    i = ft_fond_place_a(a, c);
+    i = ft_find_place_a(a, c);
     if (i < ft_find_index(b, c))
         i = ft_find_index(b, c);
     return (i);

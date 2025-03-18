@@ -28,7 +28,7 @@ void    list_args(char **av, t_stack **stack_a)
     i = 1;
     while (av[i] != NULL)
     {
-        ft_add_back(stack_a, ft_stack_new(ft_atoi(av[i])));
+        ft_add_back(stack_a, ft_stack_new(ft_atoi2(av[i])));
         i++;
     }
 }

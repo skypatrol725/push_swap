@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_check_dup.c                                     :+:      :+:    :+:   */
+/*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cldavid <cldavid@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/14 17:32:39 by cldavid           #+#    #+#             */
-/*   Updated: 2025/03/14 17:32:39 by cldavid          ###   ########.fr       */
+/*   Created: 2025/03/18 15:36:23 by cldavid           #+#    #+#             */
+/*   Updated: 2025/03/18 15:36:23 by cldavid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/push_swap.h"
+#include "../includes/push_swap.h"
 
-// This function checks if the stack includes any duplicate numbers.
-int check_dup(t_stack *a)
+int	main(int ac, char **av)
 {
-    t_stack *tmp;
+    t_stack	*a;
 
-    while (a)
-    {
-        tmp = a->next;
-        while (tmp)
-        {
-            if (a->nbr == tmp->nbr)
-                return (1);
-            tmp = tmp->next;
-        }
-        a = a->next;
-    }
-    return (0);
+	a = ft_process(ac, av);
+	if (!a || ft_check_dup(a))
+	{
+		ft_free(&a);
+		ft_error();
+	}
+	if (!ft_check_sorted(a))
+		ft_sort(&a);
+	ft_free(&a);
+	return (0);
 }

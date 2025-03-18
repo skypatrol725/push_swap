@@ -39,9 +39,9 @@ t_stack *ft_sub_process(char **argv)
     a = NULL;
     i = 0;
     tmp = ft_split(argv[1], 32);
-    while (tmp[1])
+    while (tmp[i])
     {
-        j = ft_atoi2(tmp[1]);
+        j = ft_atoi2(tmp[i]);
         ft_add_back(&a, ft_stack_new(j));
         i++;
     }

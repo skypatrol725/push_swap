@@ -6,7 +6,7 @@
 /*   By: cldavid <cldavid@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 17:25:27 by cldavid           #+#    #+#             */
-/*   Updated: 2025/03/13 17:25:37 by cldavid          ###   ########.fr       */
+/*   Updated: 2025/03/18 16:00:02 by cldavid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,10 +98,6 @@ int				ft_tolower(int c);
 int				ft_toupper(int c);
 
 t_list			*ft_lstnew(void *content);
-
-int				ft_lstsize(t_list *lst);
-
-t_list			*ft_lstlast(t_list *lst);
 
 void			ft_lstadd_front(t_list **alst, t_list *new);
 

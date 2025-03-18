@@ -23,7 +23,7 @@ int     ft_rotate_type_ab(t_stack *a, t_stack *b)
     t_stack *tmp;
 
     tmp = a;
-    i = ft_case_rra_rrb(a, b a->nbr);
+    i = ft_case_rra_rrb(a, b, a->nbr);
     while (tmp)
     {
         if (i > ft_case_ra_rb(a, b, tmp->nbr))

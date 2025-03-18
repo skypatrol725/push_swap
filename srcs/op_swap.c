@@ -60,7 +60,7 @@ void    ft_ss(t_stack **a, t_stack **b, int j)
     tmp = *b;
     *b = (*b)->next;
     tmp->next = (*b)->next;
-    (*b)->next=tmp;
+    (*b)->next = tmp;
     if (j == 0)
         write(1, "ss\n", 3);
 }

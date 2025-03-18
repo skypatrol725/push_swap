@@ -36,11 +36,8 @@ t_stack *ft_parse_quoted(char **av)
 {
     t_stack *stack_a;
     char    **tmp;
-    int     i;
-    int     j;
 
     stack_a = NULL;
-    i = 0;
     tmp = ft_split(av[1], 32);
     list_args(tmp, &stack_a);
     ft_freestr(tmp);

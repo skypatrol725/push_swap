@@ -39,6 +39,7 @@ void    ft_rr(t_stack **a, t_stack **b, int j);
 void    ft_rra(t_stack **a, int j);
 void	ft_rrb(t_stack **b, int j);
 void	ft_rrr(t_stack **a, t_stack **b, int j);
+void	ft_rrr_sub(t_stack **b, int j);
 void    ft_pa(t_stack **a, t_stack **b, int j);
 void	ft_pb(t_stack **a, t_stack **b, int j);
 
@@ -58,9 +59,17 @@ int     ft_apply_rra_rrb(t_stack **a, t_stack **b, int c, char s);
 int	    ft_apply_rra_rb(t_stack **a, t_stack **b, int c, char s);
 int	    ft_apply_ra_rrb(t_stack **a, t_stack **b, int c, char s);
 
-t_stack *ft_sub_process(char **argv);
-t_stack *ft_process(int argc, char **argv);
+int     ft_rotate_type_ab(t_stack *a, t_stack *b);
+int     ft_rotate_type_ba(t_stack *a, t_stack *b);
 
+int ft_check_sorted(t_stack *stack_a);
+
+// Sorting algo
+void	ft_sort_b_till_3(t_stack **stack_a, t_stack **stack_b);
+t_stack	*ft_sort_b(t_stack **stack_a);
+t_stack	**ft_sort_a(t_stack **stack_a, t_stack **stack_b);
+void	ft_sort(t_stack **stack_a);
+void    ft_sort_three(t_stack **stack_a);
 
 // Arguments authentication
 int     ft_isalpha(int c);
@@ -75,9 +84,12 @@ int     check_args(char **argv);
 // Parsing
 t_stack *ft_parse_quoted(char **av);
 t_stack *ft_parse(int ac, char **av);
+t_stack *ft_sub_process(char **argv);
+t_stack *ft_process(int argc, char **argv);
 int     ft_find_index(t_stack *a, int nbr);
 int     ft_find_place_b(t_stack *stack_b, int nbr_push);
 int     ft_find_place_a(t_stack *stack_a, int nbr_push);
+int     ft_atoi2(const char *str);
 
 // Lists management
 void    list_args(char **av, t_stack **stack_a);
@@ -90,6 +102,7 @@ int     ft_max(t_stack *a);
 
 // Memory management
 void    ft_free(t_stack **lst);
+void    ft_freestr(char **lst);
 
 // Message d'erreur
 void    ft_error(void);

@@ -59,7 +59,7 @@ int     ft_case_ra_rrb(t_stack *a, t_stack *b, int c)
     int     i;
 
     i = 0;
-    if (ft_find_index(b, c))
+    if (ft_find_place_b(b, c))
         i = ft_lstsize(b) - ft_find_place_b(b, c);
     i = ft_find_index(a, c) + i;
     return (i);
