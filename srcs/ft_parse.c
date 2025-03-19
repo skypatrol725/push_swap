@@ -18,16 +18,16 @@
 // 2. If 2 arguments --> quoted string
 //
 // 3. If more than 2 --> list the arguments
-t_stack *ft_parse(int ac, char **av)
+t_stack	*ft_parse(int ac, char **av)
 {
-    t_stack *stack_a;
+	t_stack	*stack_a;
 
-    stack_a = NULL;
-    if (ac < 2)
-        ft_error();
-    else if (ac == 2)
-        stack_a = ft_parse_quoted(av);
-    else
-        list_args(av, &stack_a);
-    return (stack_a);
+	stack_a = NULL;
+	if (ac < 2)
+		ft_error();
+	else if (ac == 2)
+		stack_a = ft_parse_quoted(av);
+	else
+		list_args(av, &stack_a);
+	return (stack_a);
 }

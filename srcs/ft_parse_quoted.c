@@ -14,33 +14,33 @@
 
 // This function free the string which is
 // the integer values in between quotes.
-void    ft_freestr(char **lst)
+void	ft_freestr(char **lst)
 {
-    char    *to_free;
+	char	*to_free;
 
-    if (!lst)
-        return ;
-    while (*lst)
-    {
-        to_free = *lst;
-        lst++;
-        free(to_free);
-    }
-    *lst = NULL;
+	if (!lst)
+		return ;
+	while (*lst)
+	{
+		to_free = *lst;
+		lst++;
+		free(to_free);
+	}
+	*lst = NULL;
 }
 
 // Function to parse the arguments from quoted string
 // and send them to list_args function to add them into list.
 // With ft_split we split numbers from spaces.
-t_stack *ft_parse_quoted(char **av)
+t_stack	*ft_parse_quoted(char **av)
 {
-    t_stack *stack_a;
-    char    **tmp;
+	t_stack	*stack_a;
+	char	**tmp;
 
-    stack_a = NULL;
-    tmp = ft_split(av[1], 32);
-    list_args(tmp, &stack_a);
-    ft_freestr(tmp);
-    free(tmp);
-    return (stack_a);
+	stack_a = NULL;
+	tmp = ft_split(av[1], 32);
+	list_args(tmp, &stack_a);
+	ft_freestr(tmp);
+	free(tmp);
+	return (stack_a);
 }
