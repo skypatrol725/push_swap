@@ -14,7 +14,7 @@
 
 int	main(int ac, char **av)
 {
-    t_stack	*a;
+	t_stack	*a;
 
 	a = ft_process(ac, av);
 	if (!a || ft_check_dup(a))

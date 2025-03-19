@@ -15,7 +15,7 @@
 // This function frees the stack in argument
 void	ft_free(t_stack **lst)
 {
-	t_stack *tmp;
+	t_stack	*tmp;
 
 	if (!lst)
 		return ;
