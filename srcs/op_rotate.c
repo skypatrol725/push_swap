@@ -14,22 +14,22 @@
 
 // ra (rotate a) : shift up all elements of stack a by 1.
 // The first element becomes the last one
-void    ft_ra(t_stack **a, int j)
+void	ft_ra(t_stack **a, int j)
 {
-    t_stack *tmp;
+	t_stack	*tmp;
 
-    if (!*a || !(*a)->next)
-        return ;
-    tmp = *a;
-    *a = ft_lstlast(*a);
-    (*a)->next = tmp;
-    *a = tmp->next;
-    tmp->next = NULL;
-    if (j == 0)
-        write(1, "ra\n", 3);
+	if (!*a || !(*a)->next)
+		return ;
+	tmp = *a;
+	*a = ft_lstlast(*a);
+	(*a)->next = tmp;
+	*a = tmp->next;
+	tmp->next = NULL;
+	if (j == 0)
+		write(1, "ra\n", 3);
 }
 
-// rb (rotate b) : shift up all elements of stack b by 1. 
+// rb (rotate b) : shift up all elements of stack b by 1.
 // The first element becomes the last one.
 void	ft_rb(t_stack **b, int j)
 {
@@ -47,22 +47,22 @@ void	ft_rb(t_stack **b, int j)
 }
 
 // rr : ra and rb at the same time
-void    ft_rr(t_stack **a, t_stack **b, int j)
+void	ft_rr(t_stack **a, t_stack **b, int j)
 {
-    t_stack *tmp;
+	t_stack	*tmp;
 
-    if (!*a || !((*a)->next) || !*b || !((*b)->next))
-        return ;
-    tmp = *a;
-    *a = ft_lstlast(*a);
-    (*a)->next = tmp;
-    *a = tmp->next;
-    tmp->next = NULL;
-    tmp = *b;
-    *b = ft_lstlast(*b);
-    (*b)->next = tmp;
-    *b = tmp->next;
-    tmp->next = NULL;
-    if (j == 0)
-        write(1, "rr\n", 3);
+	if (!*a || !((*a)->next) || !*b || !((*b)->next))
+		return ;
+	tmp = *a;
+	*a = ft_lstlast(*a);
+	(*a)->next = tmp;
+	*a = tmp->next;
+	tmp->next = NULL;
+	tmp = *b;
+	*b = ft_lstlast(*b);
+	(*b)->next = tmp;
+	*b = tmp->next;
+	tmp->next = NULL;
+	if (j == 0)
+		write(1, "rr\n", 3);
 }

@@ -14,32 +14,32 @@
 
 // rra (reverse rotate a) : shift down all elements of stack a by 1.
 // The last element becomes the first one.
-void    ft_rra(t_stack **a, int j)
+void	ft_rra(t_stack **a, int j)
 {
-    t_stack *tmp;
-    int     i;
+	t_stack	*tmp;
+	int		i;
 
-    if (!*a || !(*a)->next)
-        return ;
-    i = 0;
-    tmp = *a;
-    while ((*a)->next)
-    {
-        *a = (*a)->next;
-        i++;
-    }
-    (*a)->next = tmp;
-    while (i > 1)
-    {
-        tmp = tmp->next;
-        i--;
-    }
-    tmp->next = NULL;
-    if (j == 0)
-        write(1, "rra\n", 4);
+	if (!*a || !(*a)->next)
+		return ;
+	i = 0;
+	tmp = *a;
+	while ((*a)->next)
+	{
+		*a = (*a)->next;
+		i++;
+	}
+	(*a)->next = tmp;
+	while (i > 1)
+	{
+		tmp = tmp->next;
+		i--;
+	}
+	tmp->next = NULL;
+	if (j == 0)
+		write(1, "rra\n", 4);
 }
 
-// rrb (reverse rotate b) : shift down all elements of stack b by 1. 
+// rrb (reverse rotate b) : shift down all elements of stack b by 1.
 // The last element becomes the first one.
 void	ft_rrb(t_stack **b, int j)
 {
