@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cldavid <cldavid@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/13 17:18:18 by cldavid           #+#    #+#             */
-/*   Updated: 2025/03/13 17:23:42 by cldavid          ###   ########.fr       */
+/*   Created: 2024/11/13 21:02:48 by cldavid           #+#    #+#             */
+/*   Updated: 2024/11/13 22:02:43 by cldavid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void
-	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	size_t	i;
+	unsigned int	i;
 
-	if (!dst || !src)
-		return (NULL);
 	i = 0;
-	while (i < n)
+	if (!s || !f)
+		return ;
+	while (s[i] != '\0')
 	{
-		*(unsigned char*)(dst + i) = *(unsigned char*)(src + i);
-		if (*(unsigned char*)(src + i) == (unsigned char)c)
-			return (dst + i + 1);
+		f(i, &s[i]);
 		i++;
 	}
-	return (NULL);
 }

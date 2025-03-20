@@ -5,15 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cldavid <cldavid@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/13 17:18:18 by cldavid           #+#    #+#             */
-/*   Updated: 2025/03/13 17:22:53 by cldavid          ###   ########.fr       */
+/*   Created: 2024/11/05 15:06:12 by cldavid           #+#    #+#             */
+/*   Updated: 2024/11/13 21:30:42 by cldavid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int
-	ft_isprint(int c)
+int	ft_isprint(int c)
 {
-	return (c >= 32 && c <= 126);
+	if (c >= 32 && c <= 126)
+		return (1);
+	return (0);
 }

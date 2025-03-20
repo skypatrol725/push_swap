@@ -5,17 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cldavid <cldavid@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/13 17:18:18 by cldavid           #+#    #+#             */
-/*   Updated: 2025/03/13 17:25:19 by cldavid          ###   ########.fr       */
+/*   Created: 2024/11/05 15:13:55 by cldavid           #+#    #+#             */
+/*   Updated: 2024/11/05 16:22:34 by cldavid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int
-	ft_toupper(int c)
+int	ft_toupper(int c)
 {
-	if (c >= 'a' && c <= 'z')
+	if (c >= 97 && c <= 122)
+	{
 		c -= 32;
+		return (c);
+	}
 	return (c);
 }

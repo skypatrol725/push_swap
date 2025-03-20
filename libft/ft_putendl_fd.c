@@ -5,18 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cldavid <cldavid@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/13 17:18:18 by cldavid           #+#    #+#             */
-/*   Updated: 2025/03/13 17:24:11 by cldavid          ###   ########.fr       */
+/*   Created: 2024/11/12 16:26:55 by cldavid           #+#    #+#             */
+/*   Updated: 2024/11/13 17:37:09 by cldavid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void
-	ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
-	const char	nl = '\n';
+	int		i;
 
-	write(fd, s, ft_strlen(s));
-	write(fd, &nl, 1);
+	i = 0;
+	while (s[i] != '\0')
+	{
+		write(fd, &s[i], 1);
+		i++;
+	}
+	write(fd, "\n", 1);
 }

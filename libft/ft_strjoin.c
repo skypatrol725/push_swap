@@ -5,37 +5,48 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cldavid <cldavid@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/13 17:18:18 by cldavid           #+#    #+#             */
-/*   Updated: 2025/03/13 17:24:34 by cldavid          ###   ########.fr       */
+/*   Created: 2024/11/13 15:44:28 by cldavid           #+#    #+#             */
+/*   Updated: 2024/11/14 17:48:55 by cldavid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char
-	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(const char *s1, const char *s2)
 {
-	char	*str;
-	size_t	i;
-	size_t	j;
+	size_t	len_tot;
+	char	*joined;
+	int		i;
+	int		j;
 
-	str = (char*)malloc(
-		sizeof(*s1) * (ft_strlen(s1) + ft_strlen(s2) + 1));
-	if (!str)
+	len_tot = ft_strlen(s1) + ft_strlen(s2);
+	joined = malloc(sizeof(char) * len_tot + 1);
+	if (!joined)
 		return (NULL);
 	i = 0;
 	j = 0;
-	while (s1[i])
+	while (s1[i] != '\0')
 	{
-		str[j++] = s1[i];
+		joined[i] = s1[i];
 		i++;
 	}
-	i = 0;
-	while (s2[i])
+	while (s2[j] != '\0')
 	{
-		str[j++] = s2[i];
+		joined[i] = s2[j];
 		i++;
+		j++;
 	}
-	str[j] = 0;
-	return (str);
+	joined[i] = '\0';
+	return (joined);
 }
+// #include <stdio.h>
+// int		main(int ac, char **av)
+// {
+// 	if (ac != 3)
+// 	{
+// 		printf("NULL");
+// 		return (0);
+// 	}
+// 	printf("%s", ft_strjoin(av[1],av[2]));
+// 	return (0);
+// }

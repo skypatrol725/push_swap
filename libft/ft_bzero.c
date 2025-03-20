@@ -5,24 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cldavid <cldavid@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/13 17:18:18 by cldavid           #+#    #+#             */
-/*   Updated: 2025/03/13 17:22:32 by cldavid          ###   ########.fr       */
+/*   Created: 2024/11/05 15:08:37 by cldavid           #+#    #+#             */
+/*   Updated: 2024/11/12 16:39:17 by cldavid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void
-	ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	size_t	i;
+	unsigned char		*ptr;
+	size_t				i;
 
-	if (!s)
-		return ;
+	ptr = s;
 	i = 0;
 	while (i < n)
 	{
-		*(char*)(s + i) = 0;
+		ptr[i] = 0;
 		i++;
 	}
 }

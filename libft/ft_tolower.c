@@ -5,17 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cldavid <cldavid@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/13 17:18:18 by cldavid           #+#    #+#             */
-/*   Updated: 2025/03/13 17:25:14 by cldavid          ###   ########.fr       */
+/*   Created: 2024/11/05 15:16:34 by cldavid           #+#    #+#             */
+/*   Updated: 2024/11/05 16:22:31 by cldavid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int
-	ft_tolower(int c)
+int	ft_tolower(int c)
 {
-	if (c >= 'A' && c <= 'Z')
+	if (c >= 65 && c <= 90)
+	{
 		c += 32;
+		return (c);
+	}
 	return (c);
 }
